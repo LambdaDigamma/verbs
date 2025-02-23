@@ -19,8 +19,6 @@ use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
 use Symfony\Component\Serializer\Mapping\Loader\AttributeLoader;
 use Symfony\Component\Serializer\Normalizer\PropertyNormalizer;
 use Symfony\Component\Serializer\Serializer as SymfonySerializer;
-use Thunk\Verbs\Commands\MakeVerbEventCommand;
-use Thunk\Verbs\Commands\MakeVerbStateCommand;
 use Thunk\Verbs\Commands\ReplayCommand;
 use Thunk\Verbs\Contracts\BrokersEvents;
 use Thunk\Verbs\Contracts\StoresEvents;
@@ -48,8 +46,8 @@ class VerbsServiceProvider extends PackageServiceProvider
             ->name('verbs')
             ->hasConfigFile()
             ->hasCommands(
-                MakeVerbEventCommand::class,
-                MakeVerbStateCommand::class,
+//                MakeVerbEventCommand::class,
+//                MakeVerbStateCommand::class,
                 ReplayCommand::class,
             );
     }
